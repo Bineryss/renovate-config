@@ -22,4 +22,5 @@ jobs:
     with:
       logLevel: ${{ inputs.logLevel || 'info' }}
       overrideSchedule: ${{ github.event.inputs.overrideSchedule == 'true' && '{''schedule'':null}' || '' }}
+      RENOVATE_CONFIG_MIGRATION: true
     secrets: inherit
