@@ -39,6 +39,7 @@ jobs:
             # Override schedule if set
             RENOVATE_FORCE: ${{ github.event.inputs.overrideSchedule == 'true' && '{''schedule'':null}' || '' }}
             LOG_LEVEL: ${{ inputs.logLevel || 'info' }}
+            RENOVATE_CONFIG_MIGRATION: true
           with:
             configurationFile: .github/renovate.json
             token: '${{ secrets.RENOVATE_TOKEN }}'
